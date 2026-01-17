@@ -7,7 +7,7 @@ Stitch é uma ferramenta de consulta técnica desenvolvida para facilitar o dia 
 🚀 Funcionalidades
 
 
-Busca Inteligente Multi-Campo: Encontre produtos digitando códigos Medtronic, referências de concorrentes (JJ), nomes comerciais (ex: Vicryl, Monocryl) ou o composto do fio.
+Busca Inteligente Multi-Campo: Encontre produtos digitando códigos Medtronic, referências de concorrentes (Ethicon e Bioline), nomes comerciais (ex: Vicryl, Monocryl) ou o composto do fio.
 
 Destaque em Tempo Real (Highlighting): Visualização clara do termo buscado diretamente nos resultados.
 
