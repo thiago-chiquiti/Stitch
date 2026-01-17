@@ -15,7 +15,8 @@ struct Sutura: Codable, Identifiable {
         let subtipo: String
         let descricao: String
         let especialidade: String
-        let concorrentes: [String] 
+        let concorrentesJJ: [String]
+        let codigoBioline: String
         let diametro: String
         let comprimento: String
         let tipoAgulha: String
@@ -24,5 +25,15 @@ struct Sutura: Codable, Identifiable {
         let tamanhoAgulha: String
         let rms: String
         let descricaoLicitacao: String
+        let composto: String       
+        let nomeConcorrente: String
     
+    // Mapeamento das chaves do JSON para as variáveis do Swift
+    enum CodingKeys: String, CodingKey {
+        case codigo, descricao, familia, subtipo, especialidade
+        case codigoBioline = "codigoBioline"   // Tem que ser igual ao JSON
+        case concorrentesJJ = "concorrentesJJ" // Tem que ser igual ao JSON
+        case diametro, comprimento, tipoAgulha, codAgulha
+        case curvatura, tamanhoAgulha, rms, descricaoLicitacao, composto, nomeConcorrente
+    }
 }

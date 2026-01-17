@@ -1,15 +1,15 @@
 import pandas as pd
 import json
 
-# Carrega o CSV que você me enviou
-df = pd.read_csv('Tabela suturas.csv')
+# Carrega o CSV
+df = pd.read_csv('Tabela suturas.csv', sep=';', on_bad_lines='skip')
 
 # Função para agrupar os códigos dos concorrentes
 def agrupar_concorrentes(row):
     cols = ['Conc. JJ Ref 1', 'Conc. JJ Ref 2', 'Conc. JJ Ref 3', 'Conc. JJ Ref 4']
     return [str(row[c]) for c in cols if pd.notna(row[c])]
 
-# Criando a estrutura para o app
+# Estrutura
 json_data = []
 for _, row in df.iterrows():
     item = {
@@ -26,7 +26,9 @@ for _, row in df.iterrows():
         "curvatura": str(row['Curv']),
         "tamanhoAgulha": str(row['Tamanho Agulha']),
         "rms": str(row['RMS']),
-        "descricaoLicitacao": str(row['Descrição para Licitação'])
+        "descricaoLicitacao": str(row['Descrição para Licitação']),
+	"composto": str(row['Composto']),
+        "nomeConcorrente": str(row['NomeConcorrente'])
     }
     json_data.append(item)
 
